@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/*
+  Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* font-family: "Red Hat Display", sans-serif; */
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+  min-height: 100vh;
+  font-size: 1.6rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-block-start: 4.8rem;
+  margin-block-end: 6.4rem;
+}
+.logo__link {
+  display: inline-block;
+}
+
+.logo__img {
+  width: 11.8rem;
+}
+
+.hero {
+  background-image: url(assets/tablet/image-hero.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 115%;
+  padding-block-start: 55vw;
+  padding-block-end: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-end: 2.4rem;
+}
+
+.hero__content {
+  /* max-width: 30.5rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__title {
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 1.1;
+  color: #28283d;
+  max-width: 10ch;
+  margin-block-end: 2.4rem;
+}
+
+.hero__text {
+  color: #87879d;
+  margin-block-end: 2.4rem;
+  max-width: 30ch;
+}
+
+button {
+  border: none;
+  color: #fafafa;
+  padding: 1.6rem 4rem;
+  border-radius: 10rem;
+  font-weight: 900;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.hero__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.hero .btn-download {
+  background-color: #4d96a9;
+}
+.hero .btn-download span {
+  color: #8fe3f9;
+}
+.hero .btn-download:hover {
+  background-color: #71c0d4;
+}
+
+.btn-small {
+  background-color: #855fb1;
+}
+.btn-small:hover,
+footer .btn-download:hover {
+  background-color: #b18bdd;
+}
+
+main {
+  padding: 3.2rem;
+}
+
+.features {
+  display: grid;
+  row-gap: 6.4rem;
+}
+
+.number-box {
+  display: flex;
+  justify-content: center;
+}
+
+.number-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  height: 8rem;
+  width: 0.1rem;
+  background-color: #d1d1df;
+}
+
+.number {
+  background-color: white;
+  border-radius: 50%;
+  width: 5.6rem;
+  height: 5.6rem;
+  border: 1px solid #d1d1df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #87879d;
+  font-weight: 900;
+  z-index: 9999;
+}
+
+.features__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+.features__gallery img {
+  border-radius: 0.8rem;
+}
+
+.features__content {
+  text-align: center;
+  margin-block-end: 6.4rem;
+}
+
+.features__tag {
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  color: #4d96a9;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-block-end: 1.6rem;
+}
+
+.features__title {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  font-weight: bolder;
+  margin-block-end: 3.2rem;
+  margin-inline: auto;
+}
+
+.features__description {
+  font-size: 1.6rem;
+  color: #87879d;
+  max-width: 45ch;
+  margin-inline: auto;
+}
+
+.footer__content {
+  margin-top: -5.6rem;
+  background-image: linear-gradient(
+      rgb(77, 150, 169, 0.7),
+      rgb(77, 150, 169, 0.7)
+    ),
+    url(assets/mobile/image-footer.jpg);
+
+  padding: 6.4rem 3.2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+}
+
+footer h3 {
+  font-size: 3.2rem;
+  margin-block-end: 2.4rem;
+}
+footer p {
+  margin-block-end: 2.4rem;
+}
+footer .btn-download {
+  background-color: #855fb1;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 1.8rem;
+  }
+  .hero {
+    margin-block-end: 5rem;
+  }
+  .hero__title {
+    font-size: 4.8rem;
+  }
+
+  .hero__btns {
+    flex-direction: row;
+  }
+
+  .features__gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .features__tag {
+    font-size: 1.6rem;
+  }
+
+  .features__title {
+    max-width: 18ch;
+  }
+
+  .footer__content {
+    background-image: linear-gradient(
+        rgb(77, 150, 169, 0.7),
+        rgb(77, 150, 169, 0.7)
+      ),
+      url(assets/tablet/image-footer.jpg);
+  }
+  .footer__content p {
+    max-width: 45ch;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .hero {
+    background-image: url(assets/desktop/image-hero-left.png),
+      url(assets/desktop/image-hero-right.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: max(20rem, 25%);
+    background-position: left -2% top, right -2% top 30%;
+    padding: 0;
+    margin-block-start: 5rem;
+    margin-block-end: 8rem;
+  }
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    background-image: linear-gradient(
+        rgb(77, 150, 169, 0.7),
+        rgb(77, 150, 169, 0.7)
+      ),
+      url(assets/desktop/image-footer.jpg);
+    background-size: cover;
+    text-align: left;
+    padding-inline: 8rem;
+  }
+
+  .footer__content h3 {
+    width: 15ch;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .footer__content p {
+    max-width: 30ch;
+  }
+
+  .footer__content button {
+    padding-inline: 2rem;
+    max-width: 19rem;
+    width: 80%;
+  }
+}
